@@ -1,0 +1,48 @@
+:root{
+    --fuenteTitulo: 'Arlon', sans-serif;
+    --color_backgroung: #F2D272;
+}
+
+*{
+    margin: 0;
+}
+
+header{
+    background-color: aliceblue;
+}
+
+footer{
+    background-color: aliceblue;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    bottom: 0px;
+    padding-top: 20px;
+}
+
+p{
+    text-align: justify;
+}
+
+h1{
+    color: #5fa3a5;
+    font-weight: bold;
+    font-size: 31px;
+    font-family: var(--fuenteTitulo);
+    line-height: 1.2;
+    width: 100%;
+}
+
+.logo{
+    border: none;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.content{
+    background-color: var(--color_backgroung);
+    background-image: url(https://www.escueladidactica.com/navidad/2022/img/estrellas-bg.png), url(https://www.escueladidactica.com/navidad/2022/img/background.png);
+    width: 100%;
+    height: 100vh;
+}
