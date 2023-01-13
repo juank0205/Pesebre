@@ -1,9 +1,11 @@
 @import url('https://fonts.cdnfonts.com/css/arlon');
 
+/* General classes */
 *{
     margin: 0;
     padding: 0;
 }
+
 :root{
     --fuenteTitulo: 'Arlon', sans-serif;
     --color_background: #F2D272;
@@ -27,6 +29,7 @@ img{
     max-height: 100%;
 }
 
+/* Modal intro classes */
 .modal-intro{
     background-color: rgba(1, 0, 0, 0.72);
     position: absolute;
@@ -58,6 +61,7 @@ img{
     margin-right: auto;
 }
 
+/* Modal game classes */
 .modal-game-contenido{
     background-color: #fff;
     border: 8px solid var(--color1);
@@ -79,6 +83,7 @@ img{
     background-blend-mode: color-burn
 }
 
+/* Modal responsive media-query */
 @media (max-width: 992px) {
     .columnas-pesebre {
         grid-template-columns: 1fr;
@@ -89,6 +94,7 @@ img{
     }
 }
 
+/* Mode modal classes */
 .columna-contenido .copo1{
     position: absolute;
     bottom: 5%;
@@ -120,6 +126,7 @@ img{
     text-align: center;
 }
 
+/* Rotating animation for 'copo1' and 'copo2' */
 @keyframes rotate {
     from {
         transform: rotate(0deg);
@@ -130,6 +137,7 @@ img{
     }
 }
 
+/* Even more modal clasess */
 .columna-imagen-pesebre{
     padding: 15px;
     background-color: var(--color1);
@@ -172,6 +180,7 @@ img{
     position: relative;
 }
 
+/* Cover images classes to adjust their position on the interactive image */
 .modal-baltazar{
     position: absolute;
     left: 25.3%;
@@ -237,6 +246,7 @@ img{
 }
 
 
+/* Animation that uncovers the background */
 .show-item {
     animation: swing 1s .5s both ease, slideOutDown 1s ease 1.5s 1 normal forwards;
     transform-origin: top center;
@@ -291,6 +301,7 @@ img{
     text-align: center;
 }
 
+/* Class to hide the modals */
 .hide-modal{
     display: none;
 }
@@ -316,7 +327,7 @@ img{
     text-decoration: none;
 }
 
-
+/* Header classes */
 
 .header-content{
     color: #5fa3a5;
@@ -339,6 +350,7 @@ img{
     margin: auto;
 }
 
+/* Body's content classes */
 .content{
     background-color: var(--color_background);
     background-image: url(https://www.escueladidactica.com/navidad/2022/img/estrellas-bg.png), url(https://www.escueladidactica.com/navidad/2022/img/background.png);
@@ -348,10 +360,9 @@ img{
     position: absolute;
 }
 
+/* Card's display and size */
 .game{
-
     background-color: transparent;
-    grid-template-columns: repeat(4, 1fr);
     padding: 0;
     width: 100%;
     height: 100%;
@@ -376,6 +387,7 @@ img{
     height: 100%;
 }
 
+/* Specific cards with their corresponding image */
 .maria{
     background-image: url(img/parejas-001.png);
     background-color: transparent;
@@ -470,6 +482,7 @@ img{
     height: 100%;
 }
 
+/* Class dedicated to rotate the images on demand */
 .card-inner{
     width: 100%;
     height: 100%;
@@ -479,6 +492,7 @@ img{
     position: relative;
 }
 
+/* Actual rotating functionality */
 .card-inner.is-flipped{
     transform: rotateY(180deg);
 }
@@ -492,6 +506,7 @@ img{
     overflow: hidden;
 }
 
+/* Left menu buttons */
 .botonesizquierda{
     position: fixed;
     top: 50%;
@@ -517,7 +532,7 @@ img{
 }
 
 
-
+/* Footer classes */
 footer{
     position: fixed;
     z-index: 1;
@@ -572,20 +587,24 @@ footer{
     color: #fff;
 }
 
+/* Show the first footer design */
 #big-row{
     display: flex;
 }
 
+/* Hide the second footer design */
 #small-row{
     display: none;
 }
 
+/* Media-query that changes the footer design */
 @media(max-width:1000px){
-
+    /* Show the first footer design */
     #small-row{
         display: flex;
     }
     
+    /* Hide the first footer design */
     #big-row{
         display: none;
     }
