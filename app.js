@@ -28,7 +28,7 @@ function createCards(game){
     for (let i=0; i<16; i++){
         clone = templateCard.cloneNode(true);
         clone.querySelector(".card-back").classList.add(pairs[i]);
-        game.appendChild(clone);
+        document.getElementById(Math.ceil((i+1)/4)).appendChild(clone);
     }
 }
 
@@ -98,7 +98,7 @@ function setModalText(objectClass){
             string = 'El villancico es un género de cancion cuya letra hace referencia a la navidad.';
             break;
         case 'baltazar':
-            string = 'A la nanita nana es un villancio compuesto por Jeremías Quinetero, oriundo de Barbacoas, Nariño.';
+            string = 'A la nanita nana es un villancio compuesto por Jeremías Quintero, oriundo de Barbacoas, Nariño.';
             break;
         case 'gaspar':
             string = 'La palabra tutaina es utilizada en Perú para referirse coloquialmente a una fiesta pequeña, por lo que el título de este villancico se refiere a la celebración de la tradicional novena de aguinaldos.';
