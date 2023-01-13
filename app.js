@@ -23,7 +23,7 @@ let templateCard = document.getElementById("template-card").content;
 let state = [0, null];
 
 //Spawns 16 cards with their respective class
-function createCards(game){
+function createCards(){
     let clone;
     for (let i=0; i<16; i++){
         clone = templateCard.cloneNode(true);
@@ -193,7 +193,4 @@ gameBtn.addEventListener('click', ()=> {
     beat.pause();
 });
 
-
-
-
-createCards(game);
+createCards();
