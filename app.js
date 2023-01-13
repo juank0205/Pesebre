@@ -44,15 +44,15 @@ function checkState(state, target){
             break;
         case 2:
             setTimeout(() => {
-                if (state[1].classList[2] == target.classList[2]){
+                if (state[1].classList[3] == target.classList[3]){
                     counter++;
                     playAudio('correcta');
                     state[0] = 0;
                     if (counter == 8){
-                        winnerModal(state[1].classList[2]);
+                        winnerModal(state[1].classList[3]);
                     } else{
-                        setTimeout(()=>playAudio(state[1].classList[2]), 300)
-                        updateModal(state[1].classList[2]);
+                        setTimeout(()=>playAudio(state[1].classList[3]), 300)
+                        updateModal(state[1].classList[3]);
                     }
                     return;
                 }
@@ -87,7 +87,7 @@ function winnerModal(objectClass){
     document.querySelector('body').classList.toggle('no-scroll');
     document.querySelector('.modal-titulo').innerText = 'Armaste tu pesebre';
     textModal = 'Y junto con la esperanza de la llegada del Niño Dios te deseamos de todo corazón que ese regalo que tanto has anhelado llegue a ti en esta navidad.';
-    gameBtn.innerText = 'Volver a intentar';
+    gameBtn.innerHTML = 'Volver a intentar';
 }
 
 //Sets some text according to the class
@@ -123,47 +123,10 @@ function setModalText(objectClass){
 }
 
 //Loads each audio to the beat
-function playAudio(string){
-    switch (string){
-        case 'intro':
-            beat = new Audio('Audio/intro.mp3');
-            break;
-        case 'final':
-            beat = new Audio('Audio/final.mp3');
-            break;
-        case 'melchor':
-            beat = new Audio('Audio/pareja1.mp3');
-            break;
-        case 'baltazar':
-            beat = new Audio('Audio/pareja2.mp3');
-            break;
-        case 'gaspar':
-            beat = new Audio('Audio/pareja3.mp3');
-            break;
-        case 'jose':
-            beat = new Audio('Audio/pareja4.mp3');
-            break;
-        case 'pastor':
-            beat = new Audio('Audio/pareja5.mp3');
-            break;
-        case 'mula':
-            beat = new Audio('Audio/pareja6.mp3');
-            break;
-        case 'jesus':
-            beat = new Audio('Audio/pareja7.mp3');
-            break;
-        case 'maria':
-            beat = new Audio('Audio/pareja8.mp3');
-            break;
-        case 'correcta':
-            beat = new Audio('Audio/correcta.mp3');
-            break;
-        case 'incorrecta':
-            beat = new Audio('Audio/incorrecta.mp3');
-            break;
-    }
+const playAudio = (string) => {
+    beat = new Audio('./Audio/' + string + '.mp3')
     beat.play();
-}
+};
 
 //Detects when a card is clicked and apllies game functionality
 game.addEventListener('click', event =>{

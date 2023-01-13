@@ -388,8 +388,7 @@ img{
 }
 
 /* Specific cards with their corresponding image */
-.maria{
-    background-image: url(img/parejas-001.png);
+.carta-estilo{
     background-color: transparent;
     background-size: contain;
     background-repeat: no-repeat;
@@ -397,83 +396,38 @@ img{
     width: 100%;
     height: 100%;
     transform: rotateY(180deg);
+}
+
+.maria{
+    background-image: url(img/parejas-001.png);
 }
 
 .jose{
     background-image: url(img/parejas-002.png);
-    background-color: transparent;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    transform: rotateY(180deg);
 }
 
 .jesus{
     background-image: url(img/parejas-003.png);
-    background-color: transparent;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    transform: rotateY(180deg);
 }
 
 .melchor{
     background-image: url(img/parejas-004.png);
-    background-color: transparent;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    transform: rotateY(180deg);
 }
 
 .gaspar{
     background-image: url(img/parejas-005.png);
-    background-color: transparent;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    transform: rotateY(180deg);
 }
 
 .baltazar{
     background-image: url(img/parejas-006.png);
-    background-color: transparent;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    transform: rotateY(180deg);
 }
 
 .pastor{
     background-image: url(img/parejas-007.png);
-    background-color: transparent;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    transform: rotateY(180deg);
 }
 
 .mula{
     background-image: url(img/parejas-008.png);
-    background-color: transparent;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    transform: rotateY(180deg);
 }
 
 .carta{
@@ -530,7 +484,6 @@ img{
     opacity: 100%;
     transition: 0.5s;
 }
-
 
 /* Footer classes */
 footer{
@@ -608,6 +561,4 @@ footer{
     #big-row{
         display: none;
     }
-}
-
-    
+} 
