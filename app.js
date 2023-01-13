@@ -1,3 +1,9 @@
+/*
+Author: Ing(c) Juan Camilo Echeverry
+Primer Bootcamp "piscina-42" UTP sobre fullstack
+Date: 2023-01-13
+*/
+
 //Start at the top
 window.scrollTo(0, 0);
 
