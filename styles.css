@@ -399,6 +399,12 @@ img{
     height: 25%;
 }
 
+@media (max-width: 420px){
+    .game .row{
+	height: 50px;
+    }
+}
+
 .card-front{
     background-image: url(img/tarjeta_cubierta.png);
     background-color: transparent;
