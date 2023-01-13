@@ -324,6 +324,7 @@ img{
     font-weight: bold;
     margin-top: 1rem;
     border-radius: 2em;
+    border: 1px;
     display: inline-flex;
     margin-left: auto;
     margin-right: auto;
@@ -332,6 +333,18 @@ img{
     box-shadow: 0 8px 0 1px var(--btnComenzar__colorSombra), 0 6px 0 1px var(--btnComenzar__colorSombra), 0 4px 0 1px var(--btnComenzar__colorSombra), 0 2px 0 1px var(--btnComenzar__colorSombra), 0 0px 0 1px var(--btnComenzar__colorSombra);
     transition: all .3s;
     text-decoration: none;
+}
+
+.btn-comenzar:hover{
+  color: var(--btnComenzar__color);
+  text-decoration: none;
+  top: 0;
+  -webkit-box-shadow: 0 4px 0 1px var(--btnComenzar__colorSombra),
+    0 2px 0 1px var(--btnComenzar__colorSombra),
+    0 0px 0 1px var(--btnComenzar__colorSombra);
+  box-shadow: 0 4px 0 1px var(--btnComenzar__colorSombra),
+    0 2px 0 1px var(--btnComenzar__colorSombra),
+    0 0px 0 1px var(--btnComenzar__colorSombra);
 }
 
 /* Header classes */
