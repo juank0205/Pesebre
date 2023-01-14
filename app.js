@@ -9,9 +9,7 @@ window.scrollTo(0, 0);
 
 
 //Shuffle an array's content
-function shuffle(array) {
-    return array.sort(() => Math.random() - 0.5);
-}
+const shuffle = array => array.sort(() => Math.random() - 0.5);
 
 //Array containing all possible cards
 let pairs = ["maria", "maria", "jose", "jose", "jesus", "jesus", "melchor", "melchor", "gaspar", "gaspar", "baltazar", "baltazar", "pastor", "pastor", "mula", "mula"];
