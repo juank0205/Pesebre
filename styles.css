@@ -1,10 +1,10 @@
-
 /*
 Author: Ing(c) Juan Camilo Echeverry
 Primer Bootcamp "piscina-42" UTP sobre fullstack
 Date: 2023-01-13
 */
 
+/* Import used font */
 @import url('https://fonts.cdnfonts.com/css/arlon');
 
 /* General classes */
@@ -13,6 +13,7 @@ Date: 2023-01-13
     padding: 0;
 }
 
+/* Asign variables for color reutilization */
 :root{
     --fuenteTitulo: 'Arlon', sans-serif;
     --color_background: #F2D272;
@@ -21,19 +22,37 @@ Date: 2023-01-13
     --colorborde: hsl(38, 77%, 59%);
 }
 
+/* Prevent scrolling the body */
 .no-scroll{
     overflow-y: hidden;
 }
 
+/* General p style */
 p{
     text-align: justify;
     font-size: 1rem;
-
 }
 
+/* General img style */
 img{
     max-width: 100%;
     max-height: 100%;
+}
+
+/* Set background pattern */
+body{
+    background-image: url(img/pattern.png);
+}
+
+/* Correct bootstrap implementation */
+.row{
+    margin: 0!important;
+    padding: 0!important;
+}
+
+/* Correct bootstrap implementation */
+.container-fluid{
+    padding: 0!important;
 }
 
 /* Modal intro classes */
@@ -44,13 +63,14 @@ img{
     height: 100%;
     z-index: 10;
     padding-top: 10%;
-    
 }
 
+/* Center modal content */
 .modal-contenido div{
     justify-content: center;
 }
 
+/* Modal style and positioning */
 .modal-contenedor{
     max-height: 90%;
     max-width: 1200px;
@@ -78,12 +98,12 @@ img{
     max-width: 1000px;
 }
 
+/* Division for the game modal*/
 .columnas-pesebre{
     display: grid;
     grid-template-columns: 60% 1fr;
     flex-direction: row;
     background-color: #E6CE76;
-    background-image: url(./img/estrellas.png);
     background-size: 700px;
     background-position: center;
     background-repeat: no-repeat;
@@ -101,16 +121,7 @@ img{
     }
 }
 
-/* Mode modal classes */
-.columna-contenido .copo1{
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-    width: 30px;
-    height: auto;
-    animation: 2.5s rotate alternate-reverse infinite;
-}
-
+/* Copo animation and position */
 .columna-contenido .copo2{
     position: absolute;
     bottom: 5%;
@@ -120,6 +131,7 @@ img{
     animation: 2.5s rotate alternate-reverse infinite;
 }
 
+/* Copo animation and position */
 .columna-contenido .copo1{
     position: absolute;
     bottom: 5%;
@@ -172,17 +184,18 @@ img{
     overflow: hidden;
 }
 
+/* Modal content to be modified */
 .columna-contenido{
     font-size: 18px;
     padding: 10px 20px 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-image: url(img/modal/cinta.png), url(img/modal/bola.png);
-    background-size: 18%, 30%;
+    background-image: url(img/modal/cinta.png), url(img/modal/bola.png), url(img/estrellas.png);
+    background-size: 18%, 30%, 100%;
     background-position: top 7% left 4%, top right -5%;
     background-repeat: no-repeat;
-    background-color: var(--color1);
+    background-color: #E6CE76;
     background-blend-mode: normal;
     position: relative;
 }
@@ -196,6 +209,7 @@ img{
     height: 60%;
 }
 
+/* Start of modal cover classes (to adjust position and size to each image) */
 .modal-gaspar{
     position: absolute;
     left: 40%;
@@ -251,14 +265,16 @@ img{
     width: 20%;
     height: 60.2%;
 }
+/* End of modal cover classes */
 
 
-/* Animation that uncovers the background */
+/* Animation that uncovers the background on the modal */
 .show-item {
     animation: swing 1s .5s both ease, slideOutDown 1s ease 1.5s 1 normal forwards;
     transform-origin: top center;
 }
 
+/* Swing animation definition */
 @keyframes swing {
     20% {
         -webkit-transform: rotate3d(0, 0, 1, 15deg);
@@ -286,6 +302,7 @@ img{
     }
 }
 
+/* Animation to "drop" the images */
 @keyframes slideOutDown {
     0% {
         -webkit-transform: translateY(0);
@@ -299,6 +316,27 @@ img{
     }
 }
 
+/* Popping animation for cards spawn */
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Class that includes the popping animation */
+.cardAnimation{
+    animation: zoom .5s ease backwards;
+}
+
+/* Text format for modal title */
 .modal-titulo{
     font-family: var(--fuenteTitulo);
     font-size: 32px;
@@ -313,6 +351,7 @@ img{
     display: none;
 }
 
+/* Button format */
 .btn-comenzar{
     animation: bounceIn 1.5s backwards;
     --btnComenzar__color: white;
@@ -335,6 +374,7 @@ img{
     text-decoration: none;
 }
 
+/* Hover functionality for buttons */
 .btn-comenzar:hover{
   color: var(--btnComenzar__color);
   text-decoration: none;
@@ -347,8 +387,58 @@ img{
     0 0px 0 1px var(--btnComenzar__colorSombra);
 }
 
-/* Header classes */
+/* End-game modal classes */
+#btn-final{
+    --btnComenzar__color: white;
+    --btnComenzar__colorFondo: #BF0000;
+    --btnComenzar__colorSombra: #840000;
+    font-size: 20px;
+    background-color: #BF0000;
+}
 
+/* Text format for end modal title */
+.modal-titulo-final{
+    font-size: 34px;
+    font-family: "Baloo", sans-serif;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #BC3D2E;
+    padding: 0 40px;
+    line-height: 1;
+    text-align: center;
+}
+
+/* End modal share buttons section classes */
+.modal_botonesCompartir img {
+    width: 35px;
+    margin: 0 10px;
+    animation: compartir 1s infinite;
+}
+
+.modal_botonesCompartir {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    position: relative;
+    background-color: #07584E;
+}
+
+.modal_compartir {
+    margin-right: 30px;
+    color: #fff;
+    font-size: 25px;
+}
+
+#parrafo-final{
+    font-size: 17px;
+    margin-bottom: 20px;
+    margin-top: auto;
+    color: #161b1c;
+}
+/* End of modal share section */
+
+/* Header classes */
 .header-content{
     color: #5fa3a5;
     font-weight: bold;
@@ -359,10 +449,12 @@ img{
 
 }
 
+/* Header text and title */
 .second-col{
     background: #e6f9f4;
 }
 
+/* Main logo image format */
 .logo{
     border: none;
     max-width: 100%;
@@ -376,18 +468,18 @@ img{
     background-image: url(https://www.escueladidactica.com/navidad/2022/img/estrellas-bg.png), url(https://www.escueladidactica.com/navidad/2022/img/background.png);
     width: 100%;
     height: 100%;
-    padding-top: 3%;
-    padding-bottom: 10%;
-    position: absolute;
+    padding: 3% 3% 20% 3%;
+    position: relative;
     display: flex;
+    justify-content: center;
 }
 
 /* Card's display and size */
 .game{
     background-color: transparent;
     padding: 0;
-    width: 100%;
-    height: 100%;
+    width: 900px;
+    height: 760px;
 }
 
 .game *{
@@ -395,16 +487,39 @@ img{
 	border: none;
 }
 
+/* Setting the grid distribution */
 .game .row{
     height: 25%;
 }
 
-@media (max-width: 420px){
+/* Responsive implementation for the game board */
+@media (max-width: 800px){
     .game .row{
-	height: 50px;
+        width: 100%;
+        min-height: 80px;
+        max-height: 150px;
     }
 }
 
+@media (max-width: 420px){
+    .game .row{
+        width: 100%;
+        height: 80px;
+    }
+}
+
+@media (max-height: 700px){
+    .game .row{
+        width: 100%;
+        max-height: 150px;
+    }
+
+    .content{
+        height: 120vh;
+    }
+}
+
+/* Front face for cards */
 .card-front{
     background-image: url(img/tarjeta_cubierta.png);
     background-color: transparent;
@@ -426,6 +541,7 @@ img{
     transform: rotateY(180deg);
 }
 
+/* Start of url to set the back image from js */
 .maria{
     background-image: url(img/parejas-001.png);
 }
@@ -457,11 +573,14 @@ img{
 .mula{
     background-image: url(img/parejas-008.png);
 }
+/* End of back image urls */
 
+/* Card style */
 .carta{
-    margin: 0;
-    padding: 0;
+    margin: 0!important;
+    padding: 0!important;
     height: 100%;
+    width: 25%;
 }
 
 /* Class dedicated to rotate the images on demand */
@@ -479,6 +598,7 @@ img{
     transform: rotateY(180deg);
 }
 
+/* Container for front and back faces */
 .card-face{
     position: absolute;
     width: 100%;
@@ -489,19 +609,73 @@ img{
 }
 
 /* Left menu buttons */
-.botonesizquierda{
-    position: fixed;
-    top: 50%;
-    left: 3px;
-    z-index: 100;
-    line-height: 1.5;
+@media (max-width: 767px){
+    .separador {
+        border-top: 1px solid #ccc;
+        max-width: 95%;
+        margin: 0 auto;
+    }
 }
 
+/* Left static menu */
+.left-menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 5px;
+}
+
+/* Bottom menu for mobile */
+.left-menu-text {
+    display: none;
+    text-align: right;
+    font-size: 18px;
+    margin-bottom: 3px;
+    color: var(--color__textoFooter);
+    padding-right: 15px;
+}
+
+/* Bottom text for mobile */
+.left-menu-logo{
+    color: #161b1c;
+    text-align: center;
+    margin: 20px auto 0px;
+    max-width: 350px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: none;
+}
+
+/* Media querys to exchange between mobile and desktop design */
+@media (max-width: 767px){
+    .left-menu {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px;
+        width: calc(100% - 20px);
+        top: auto;
+        left: auto;
+    }
+
+    .left-menu-text{
+        display: block;
+    }
+
+    .left-menu-logo{
+        display: block;
+    }
+}
+
+/* Left menu buttons */
 .btn2-circulo{
     width: 31px;
     height: 31px;
     text-align: center;
-    opacity: 50%;
+    opacity: 80%;
     margin-top: auto;
     margin-bottom: 2px;
     margin-right: 5px;
@@ -520,10 +694,10 @@ footer{
     width: 100%;
     bottom: 0px;
     background-color: #e6f9f4;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 7px;
 }
 
+/* Footer buttons */
 .btn-circulo{
     width: 31px;
     height: 31px;
@@ -588,5 +762,9 @@ footer{
     /* Hide the first footer design */
     #big-row{
         display: none;
+    }
+
+    footer{
+        height: 50px;
     }
 } 
